@@ -39,7 +39,7 @@ var mypath ='./actions';
                 var tmpPath = path + '/' + item;
                 fs.stat(tmpPath, function (err1, stats) {
                     if (!err1 && !stats.isDirectory()) {
-                        // logger.info("load action :" + tmpPath);
+                        logger.info("load action :" + tmpPath);
                         require(tmpPath)(app);
                     }
                 })
