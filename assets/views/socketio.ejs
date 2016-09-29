@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style/webuploader.css" />
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+</head>
+<body>
+<div id="wrapper">
+    <div id="container">
+
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/socket.io.js"></script>
+
+</body>
+
+
+<script>
+
+
+
+
+let socket = io('localhost:97');
+socket.on('connect', function() {
+    console.log('connect');
+});
+socket.on('begin_chat', function(data) {
+    console.log(data);
+});
+
+$.ajax({
+    url: 'http://localhost:97/test/socket/io',
+    dataType: "json",
+    type: 'get',
+    data: {},
+    success: function (r) {
+        $('body').append(r);
+    },
+    error: function (xhr, status, error) {
+        console.log(error);
+    }
+});
+</script>
+
+
+</html>
