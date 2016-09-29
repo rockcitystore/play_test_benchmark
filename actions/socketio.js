@@ -1,6 +1,7 @@
 /**
  * Created by root on 16/6/9.
  */
+"use strict";
 
 var Promise = require('bluebird');
 var constant = require("../utils/constant.js");
@@ -11,7 +12,6 @@ var net =require('net');
 let socketioView =(req,res) =>{
     res.render('socketio')
 }
-
 
 let chat = (req, res) => {
     let client = net.connect({host: 'wss://echo.websocket.org'}, () => {
@@ -78,6 +78,6 @@ var handle = (str)=>{
 
 module.exports = function (app) {
     app.get("/test/socket/view", socketioView);
-    app.get("/test/socket/io", socketio);
+    app.get("/test/socket/io", chat);
 
 };

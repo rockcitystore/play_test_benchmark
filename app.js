@@ -30,8 +30,7 @@ app.all('*', function (req, res, next) {
     else  next();
 });
 
-var mypath = './actions_p';
-//var mypath ='./actions';
+var mypath ='./actions';
 
 (function (path) {
     fs.readdir(path, function (err, files) {
