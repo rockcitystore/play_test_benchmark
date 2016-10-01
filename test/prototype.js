@@ -16,3 +16,4 @@ var objB ={
 var obj = Object.create(objB);
 logger.debug(obj.a);
 
+logger.debug(Object.getOwnPropertyDescriptor(objA));
