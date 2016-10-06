@@ -18,7 +18,7 @@ var o = {
             this.$n = n
             logger.debug('set ' + this.$n);
         } else {
-            throw "不能比当前值小"
+            throw ("不能比当前值小 " + this.$n)
         }
     }
 }
