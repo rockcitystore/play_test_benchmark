@@ -21,5 +21,7 @@ var mult = (function() {
 })();
 
 
+
+
 logger.debug(mult(1,2,3));
 logger.debug(mult(1,2,3));
