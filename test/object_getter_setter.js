@@ -1,6 +1,7 @@
 /**
  * Created by root on 16/9/26.
  */
+"use strict";
 
 let logger = require('../utils/logger').getLogger(__filename.split("/").pop());
 
