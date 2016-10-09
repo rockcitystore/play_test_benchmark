@@ -12,6 +12,7 @@ logger.debug('-----------------------');
 let array =[1,2,3]
 let b =function(x,y){
     logger.debug(arguments);
+    logger.debug(...arguments);
     logger.debug(Array.isArray(arguments));//可判断出类数组对象
     logger.debug(Array.isArray(array));//可判断出类数组对象
 
