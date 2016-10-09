@@ -33,3 +33,11 @@ let b = ()=>{
     })()
 }
 b();
+
+let scope = 'gg'
+let c =() =>{
+    let scope = 'll'
+    let f  = ()=>{
+
+    }
+}
