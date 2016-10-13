@@ -63,7 +63,7 @@ logger.debug('--------------------');
 // logger.debug('--------------------');
 
 var d = function () {
-    this.name ='d';
+    // this.name ='d';
     (()=>{
         logger.debug(this.name);
     })();
@@ -72,6 +72,11 @@ var d = function () {
     }
     df()
 }
-d()
+d.prototype.name ="d"
+
+
+
+var nd = new d();
+nd()
 
 
