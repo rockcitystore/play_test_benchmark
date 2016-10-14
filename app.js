@@ -64,3 +64,11 @@ io.sockets.on('connection', function (socket) {
 });
 
 module.exports = io;
+
+//
+// var swfBuild = require('swf-build');
+//
+// swfBuild('./test/main.as',function(err, stdout, stderr){
+//     // output './test/main.swf'
+//     logger.debug('swfBuild done');
+// });

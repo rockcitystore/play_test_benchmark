@@ -20,11 +20,10 @@ require(["rtmp-streamer"], function (RtmpStreamer) {
     // streamer.setScreenPosition(80, 60);
     // streamer.setScreenSize(640,480);//视频尺寸
     // streamer.setCamMode(640,480,15);//传输尺寸
-
+//https://github.com/videojs/video-js-swf/issues/55#issuecomment-112340618
     document.getElementById("play").addEventListener("click", function () {
         player.play('rtmp://video-center.alivecdn.com/deji/46333?vhost=video.cdn.dejionline.com', '');
     });
-
     document.getElementById("publish").addEventListener("click", function () {
         streamer.publish('rtmp://video-center.alivecdn.com/deji', '46333?vhost=video.cdn.dejionline.com');
     });
