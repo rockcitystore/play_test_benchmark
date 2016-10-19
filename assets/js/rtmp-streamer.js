@@ -15,7 +15,6 @@ define('rtmp-streamer', function () {
          * Embed swf element, eg. <embed src="*.swf"></embed>.
          */
         var _elem = elem;
-
         if (!isReady) {
             setTimeout(function () {
                 return RtmpStreamer(elem);

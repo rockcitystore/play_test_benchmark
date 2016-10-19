@@ -22,10 +22,12 @@ require(["rtmp-streamer"], function (RtmpStreamer) {
     // streamer.setCamMode(640,480,15);//传输尺寸
 //https://github.com/videojs/video-js-swf/issues/55#issuecomment-112340618
     document.getElementById("play").addEventListener("click", function () {
-        player.play('rtmp://video-center.alivecdn.com/deji/46333?vhost=video.cdn.dejionline.com', '');
+        player.play('rtmp://video.cdn.dejionline.com/deji/46333', '');
     });
     document.getElementById("publish").addEventListener("click", function () {
         streamer.publish('rtmp://video-center.alivecdn.com/deji', '46333?vhost=video.cdn.dejionline.com');
+        // streamer.publish('rtmp://video-center.alivecdn.com/AppName', 'StreamName?vhost=video.cdn.dejionline.com');
+
     });
 
     document.getElementById("streamer-disconnect").addEventListener("click", function () {
