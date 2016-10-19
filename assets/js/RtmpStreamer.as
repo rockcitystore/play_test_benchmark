@@ -101,6 +101,7 @@ public class RtmpStreamer extends MovieClip {
     }
 
     public function disconnect():void {
+        vidPlayer.attachCamera(null);
         nc.close();
     }
 
@@ -203,6 +204,8 @@ public class RtmpStreamer extends MovieClip {
         ns.attachAudio(mic);
         ns.publish(name, "live");
     }
+
+
 
     private function displayPublishingVideo():void {
         vidPlayer = getPlayer();
