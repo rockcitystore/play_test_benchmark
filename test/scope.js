@@ -22,6 +22,7 @@ var a = function (o) {
 // a({});
 // a();
 
+logger.debug("-------------------------");
 
 let b = ()=>{
     logger.debug(i);
@@ -33,6 +34,7 @@ let b = ()=>{
     })()
 }
 b();
+logger.debug("-------------------------");
 
 let scope = 'gg'
 let c =() =>{
@@ -41,3 +43,35 @@ let c =() =>{
 
     }
 }
+
+logger.debug("-------------------------");
+
+
+var foo = 1;
+function bar() {
+     foo=10;
+    return;
+    function foo() {//等同于var foo ＝ function(){}
+
+    }
+}
+bar();
+logger.debug(foo);//1
+
+
+logger.debug("-------------------------");
+
+var x =3;
+var foo ={
+    x:2,
+    baz:{
+        x:1,
+        bar:function () {
+            logger.debug(this.x);
+            return this.x;
+        }
+    }
+}
+var go = foo.baz.bar;
+// console.debug(go());
+// logger.debug(foo.baz.bar());
