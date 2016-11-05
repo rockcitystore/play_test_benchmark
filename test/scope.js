@@ -75,3 +75,23 @@ var foo ={
 var go = foo.baz.bar;
 // console.debug(go());
 // logger.debug(foo.baz.bar());
+
+logger.debug("-------------------------");
+
+var x   = 4,
+    obj = {
+        x: 3,
+        bar: function() {
+            var x = 2;
+            logger.debug(this.x);
+            setTimeout(function() {
+                var x = 1;
+                logger.debug(this.x);
+            }, 1000);
+        }
+    };
+obj.bar();
+
+
+logger.debug("-------------------------");
+

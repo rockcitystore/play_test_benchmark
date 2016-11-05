@@ -66,13 +66,13 @@ var tick =(client)=>{
 
 
 var handle = (str)=>{
-    let data = new Buffer(JSON.stringify(str));
+    let data = new Buffer(JSON.stringify(str));//生成二进制报文体
     let length = new Buffer(1);
-    length.writeInt8(data.length);
+    length.writeInt8(data.length);//写入报文体长度
     let zero = new Buffer(1);
-    zero.writeInt8(0);
+    zero.writeInt8(0);//用于补足四位
     let tl = zero.length + zero.length + zero.length + length.length + data.length;
-    data = Buffer.concat([zero, zero, zero, length, data], tl);
+    data = Buffer.concat([zero, zero, zero, length, data], tl);//连接报文
     return data;
 }
 
